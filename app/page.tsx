@@ -229,7 +229,7 @@ export default function TechnologicLanding() {
                     <Menu className="h-5 w-5" />
                   </Button>
                 </SheetTrigger>
-                <SheetContent side="right" className="w-80 bg-black/95 border-purple-500/30">
+                <SheetContent side="right" className="w-80 bg-black/95 border-purple-500/30 text-white">
                   <div className="flex items-center justify-between mb-8">
                     <h2 className="text-lg font-semibold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                       Navigation
@@ -358,9 +358,9 @@ export default function TechnologicLanding() {
               ))}
             </div>
 
-            {/* Live Chat Interface */}
-            <Card className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-purple-500/30 backdrop-blur-sm">
-              <CardHeader>
+            {/* Live Chat Interface - Fixed Dark Theme */}
+            <Card className="bg-gradient-to-br from-black/80 to-purple-900/20 border-purple-500/30 backdrop-blur-sm">
+              <CardHeader className="bg-gradient-to-r from-purple-900/20 to-blue-900/20">
                 <CardTitle className="text-2xl text-center bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                   Talk to Zyra
                 </CardTitle>
@@ -368,14 +368,16 @@ export default function TechnologicLanding() {
                   Chat with our AI-powered Discord bot
                 </CardDescription>
               </CardHeader>
-              <CardContent>
-                <ScrollArea className="h-96 mb-4 p-4 border border-purple-500/20 rounded-lg bg-black/30">
+              <CardContent className="bg-black/40">
+                <ScrollArea className="h-96 mb-4 p-4 border border-purple-500/20 rounded-lg bg-black/50">
                   <div className="space-y-4">
                     {chatHistory.map((msg, i) => (
                       <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
                         <div
                           className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
-                            msg.role === "user" ? "bg-blue-600 text-white" : "bg-purple-600 text-white"
+                            msg.role === "user"
+                              ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white"
+                              : "bg-gradient-to-r from-purple-600 to-purple-700 text-white"
                           }`}
                         >
                           {msg.content}
@@ -384,7 +386,7 @@ export default function TechnologicLanding() {
                     ))}
                     {isTyping && (
                       <div className="flex justify-start">
-                        <div className="bg-purple-600 text-white px-4 py-2 rounded-lg">
+                        <div className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-4 py-2 rounded-lg">
                           <div className="flex space-x-1">
                             <div className="w-2 h-2 bg-white rounded-full animate-bounce" />
                             <div
@@ -408,9 +410,12 @@ export default function TechnologicLanding() {
                     onChange={(e) => setChatMessage(e.target.value)}
                     onKeyPress={(e) => e.key === "Enter" && sendMessage()}
                     placeholder="Type a message to Zyra..."
-                    className="bg-black/50 border-purple-500/30 text-white"
+                    className="bg-black/70 border-purple-500/30 text-white placeholder:text-gray-400 focus:border-purple-400"
                   />
-                  <Button onClick={sendMessage} className="bg-purple-600 hover:bg-purple-700">
+                  <Button
+                    onClick={sendMessage}
+                    className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
+                  >
                     <Send className="h-4 w-4" />
                   </Button>
                 </div>
@@ -475,19 +480,19 @@ export default function TechnologicLanding() {
                 <div className="flex justify-center space-x-4">
                   <Badge
                     variant="outline"
-                    className={`transition-colors duration-300 ${isAngelMode ? "border-pink-500" : "border-red-500"}`}
+                    className={`transition-colors duration-300 ${isAngelMode ? "border-pink-500 text-pink-300" : "border-red-500 text-red-300"}`}
                   >
                     .pranked.html
                   </Badge>
                   <Badge
                     variant="outline"
-                    className={`transition-colors duration-300 ${isAngelMode ? "border-pink-500" : "border-red-500"}`}
+                    className={`transition-colors duration-300 ${isAngelMode ? "border-pink-500 text-pink-300" : "border-red-500 text-red-300"}`}
                   >
                     .css
                   </Badge>
                   <Badge
                     variant="outline"
-                    className={`transition-colors duration-300 ${isAngelMode ? "border-pink-500" : "border-red-500"}`}
+                    className={`transition-colors duration-300 ${isAngelMode ? "border-pink-500 text-pink-300" : "border-red-500 text-red-300"}`}
                   >
                     .js
                   </Badge>
@@ -542,7 +547,7 @@ export default function TechnologicLanding() {
               <Button
                 variant="outline"
                 size="icon"
-                className="border-purple-500 hover:bg-purple-500/20 bg-transparent backdrop-blur-sm"
+                className="border-purple-500 hover:bg-purple-500/20 bg-transparent backdrop-blur-sm text-white"
                 asChild
               >
                 <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube Channel">
@@ -552,7 +557,7 @@ export default function TechnologicLanding() {
               <Button
                 variant="outline"
                 size="icon"
-                className="border-purple-500 hover:bg-purple-500/20 bg-transparent backdrop-blur-sm"
+                className="border-purple-500 hover:bg-purple-500/20 bg-transparent backdrop-blur-sm text-white"
                 asChild
               >
                 <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
@@ -562,7 +567,7 @@ export default function TechnologicLanding() {
               <Button
                 variant="outline"
                 size="icon"
-                className="border-purple-500 hover:bg-purple-500/20 bg-transparent backdrop-blur-sm"
+                className="border-purple-500 hover:bg-purple-500/20 bg-transparent backdrop-blur-sm text-white"
                 asChild
               >
                 <a href="mailto:contact@technologic.dev" aria-label="Email">
