@@ -560,7 +560,7 @@ export default function TechnologicLanding() {
                 className="border-purple-500 hover:bg-purple-500/20 bg-transparent backdrop-blur-sm text-white"
                 asChild
               >
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <a href="https://github.com/CompooterLOL" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
@@ -570,13 +570,13 @@ export default function TechnologicLanding() {
                 className="border-purple-500 hover:bg-purple-500/20 bg-transparent backdrop-blur-sm text-white"
                 asChild
               >
-                <a href="mailto:contact@technologic.dev" aria-label="Email">
+                <a href="mailto:technologic.applications@gmail.com" aria-label="Email">
                   <Mail className="h-5 w-5" />
                 </a>
               </Button>
             </div>
 
-            <p className="text-sm text-gray-500">Made by humans... and one very sarcastic AI.</p>
+            <p className="text-sm text-gray-500">Copyright 2025 Technologic. All Rights Reserved.</p>
           </div>
         </div>
       </footer>
