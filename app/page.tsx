@@ -550,7 +550,7 @@ export default function TechnologicLanding() {
                 className="border-purple-500 hover:bg-purple-500/20 bg-transparent backdrop-blur-sm text-white"
                 asChild
               >
-                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube Channel">
+                <a href="https://www.youtube.com/@technologic.platform" target="_blank" rel="noopener noreferrer" aria-label="YouTube Channel">
                   <Youtube className="h-5 w-5" />
                 </a>
               </Button>
